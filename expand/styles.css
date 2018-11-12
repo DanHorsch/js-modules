@@ -53,6 +53,9 @@
 .close-button:after {
   transform: rotate(-45deg);
 }
+.close-button:hover, .expand-cell:hover {
+  cursor: pointer;
+}
 /* tablets and phones */
 @media (max-width: 991px) {
   .expand-text-container, .expand-text {
