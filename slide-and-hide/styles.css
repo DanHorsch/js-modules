@@ -6,27 +6,50 @@ html, body {
   padding: 0;
 }
 .slide-column {
+  padding: 20px;
   height: 500px;
-  width: calc(33% - 40px);
+  width: calc(33.33% - 40px);
   margin:0 20px;
   position: absolute;
   top: 0;
   left: -33%;
-  background-color: red;
-}
-.slide-first {
-  background-color: green !important;
-}
-.slide-last, .slide-first {
-  display: none;
+  background-color: gray;
 }
 .slide-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: blue;;
   width: 50px;
   height: 50px;
+}
+.slide-control:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 4px);
+  transform: translate(-50%, -50%);
+  border-bottom: solid 8px transparent;
+  border-top: solid 8px transparent;
+  border-right: solid 10px black;
+}
+.slide-control:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: solid 8px transparent;
+  border-top: solid 8px transparent;
+  border-right: solid 10px white;
+}
+.slide-control:hover {
+  cursor: pointer;
+}
+#slide-right:after, #slide-right:before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+#slide-right:before {
+  left: calc(50% + 4px);
 }
 #slide-right {
   right: 0;

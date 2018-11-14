@@ -1,6 +1,6 @@
 
 // config variables
-var columnWidth = 33;
+var columnWidth = 33.33;
 var transitionSpeed = 1; // in seonds
 var lastColumnNumber = 5;
 var windowWidth = $(window).width();
@@ -21,13 +21,12 @@ $(document).ready(function() {
   $('.slide-column').each(function(index, element) {
     $('#slide-' + (index + 1)).css("left", leftPosition + "%");
     leftPosition += columnWidth;
-    $(element).css("background-color", "blue");
     $(element).css("transition", "all " + transitionSpeed + "s");
   })
 });
 
 // move elements to the left
-$('#slide-left').on("click", function() {
+$('#slide-right').on("click", function() {
   if(isTransitioning == false) {
     isTransitioning = true;
     var lastColumnLeft = $('.slide-last').css("left");
@@ -43,7 +42,7 @@ $('#slide-left').on("click", function() {
 });
 
 // move elements to the right
-$('#slide-right').on("click", function() {
+$('#slide-left').on("click", function() {
   if(isTransitioning == false) {
     isTransitioning = true;
     $('.slide-first').show();
