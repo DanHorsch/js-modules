@@ -1,3 +1,10 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
 .slide-column {
   height: 500px;
   width: calc(33% - 40px);
@@ -22,16 +29,32 @@
   height: 50px;
 }
 #slide-right {
-  right: -100px;
+  right: 0;
 }
 #slide-left {
-  left: -100px;
+  left: 0;
 }
 .slide-container {
   position: relative;
+  padding: 0;
 }
 .slide-row {
+  width: calc(100% - 100px);
+  display: block;
+  margin: 0 auto;
   height: 500px;
   position: relative;
   overflow: hidden;
+}
+/* tablets */
+@media (max-width: 991px) {
+  .slide-column {
+    width: calc(50% - 40px);
+  }
+}
+/* phones */
+@media (max-width: 575px) {
+  .slide-column {
+    width: calc(100% - 40px);
+  }
 }
